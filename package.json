@@ -12,7 +12,7 @@
   "dependencies": {
     "@ledgerhq/hw-transport-webusb": "^6.29.4",
     "buffer": "^6.0.3",
-    "ledger-bitcoin": "^0.2.1",
+    "ledger-bitcoin": "^0.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

@@ -7,11 +7,13 @@ import {AppClient} from 'ledger-bitcoin'
 function App() {
 
   const handleClick = async () => {
-    console.log('TransportWebUSB.create() start');
+    console.log('handle click')
     const transport = await TransportWebUSB.create();
+    console.log('TransportWebUSB.create() - created');
     const app = new AppClient(transport);
     const masterFingerprint = await app.getMasterFingerprint();
-    console.log('end', masterFingerprint);
+    await transport.close();
+    console.log('TransportWebUSB.close() - closed', masterFingerprint);
   }
 
   return (
